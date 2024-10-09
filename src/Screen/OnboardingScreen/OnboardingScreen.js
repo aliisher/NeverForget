@@ -4,11 +4,11 @@ import Carousel from 'react-native-snap-carousel';
 import {hp, wp} from '../../Constant/Responsive';
 import {Colors} from '../../Constant/Colors';
 import {data} from '../../Constant/DummyData';
-import Btn from '../../Components.js/Btn';
-import BtnWithIcon from '../../Components.js/BtnWithIcon';
-import BtnRadius from '../../Components.js/BtnRadius';
-import Header from '../../Components.js/Header';
 import {useNavigation} from '@react-navigation/native';
+import BtnWithIcon1 from '../../Component/BtnWithIcon';
+import Button from '../../Component/Btn';
+import AppHeader from '../../Component/Header';
+import ButtonRadius from '../../Component/BtnRadius';
 
 const OnboardingScreen = () => {
   const navigation = useNavigation();
@@ -40,7 +40,7 @@ const OnboardingScreen = () => {
   return (
     <View style={styles.container}>
       {activeIndex > 0 && (
-        <Header onPress={() => carouselRef.current.snapToPrev()} />
+        <AppHeader onPress={() => carouselRef.current.snapToPrev()} />
       )}
 
       <Carousel
@@ -55,13 +55,13 @@ const OnboardingScreen = () => {
       <View style={styles.buttonContainer}>
         {activeIndex < data.length - 1 && (
           <>
-            <Btn title={'Skip'} onPress={() => console.log('Skip')} />
-            <BtnWithIcon onPress={() => carouselRef.current.snapToNext()} />
+            <Button title={'Skip'} onPress={() => console.log('Skip')} />
+            <BtnWithIcon1 onPress={() => carouselRef.current.snapToNext()} />
           </>
         )}
       </View>
       {activeIndex == 2 && (
-        <BtnRadius
+        <ButtonRadius
           title={'Get Started'}
           onPress={() => navigation.navigate('AuthNavigation')}
         />

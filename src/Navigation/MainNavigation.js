@@ -5,6 +5,7 @@ import {ActivityIndicator} from 'react-native';
 import SuplashScreen from '../Screen/SuplashScreen';
 import OnboardingScreen from '../Screen/OnboardingScreen/OnboardingScreen';
 import AuthNavigation from './AuthNavigation';
+import BottomNavigation from './BottomNavigation';
 
 const mainStack = createNativeStackNavigator();
 
@@ -27,10 +28,10 @@ function MainNavigation() {
           component={OnboardingScreen}
         />
         <mainStack.Screen name="AuthNavigation" component={AuthNavigation} />
-        {/* <mainStack.Screen
-          name="CommonNavigation"
-          component={CommonNavigation}
-        /> */}
+        <mainStack.Screen
+          name="BottomNavigation"
+          component={BottomNavigation}
+        />
       </mainStack.Navigator>
     </NavigationContainer>
   );

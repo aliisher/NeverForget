@@ -1,12 +1,10 @@
-import { StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {Colors} from '../Constant/Colors';
-import { wp} from '../Constant/Responsive';
+import {wp} from '../Constant/Responsive';
 import {FontSize, Fonts} from '../Constant/Fonts';
-import { NearByFeeds } from '../Components/NearByFeeds';
-import { FollowingFeeds } from '../Components/FolllowingFeeds';
-
-
+import {NearByFeeds} from '../Component/NearByFeeds';
+import {FollowingFeeds} from '../Component/FolllowingFeeds';
 
 const Tab = createMaterialTopTabNavigator();
 

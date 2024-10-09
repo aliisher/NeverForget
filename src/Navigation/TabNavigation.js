@@ -3,7 +3,7 @@ import {Text, View, ActivityIndicator, StyleSheet} from 'react-native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {Colors} from '../Constant/Colors';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import DiscoverCom from '../Components/DiscoverCom';
+import DiscoverCom from '../Component/DiscoverCom';
 import {hp, wp} from '../Constant/Responsive';
 import Api from '../API/ApiCalls';
 import {FontSize, Fonts} from '../Constant/Fonts';

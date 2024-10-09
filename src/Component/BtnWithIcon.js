@@ -4,7 +4,7 @@ import {hp, wp} from '../Constant/Responsive';
 import {Colors} from '../Constant/Colors';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
-const BtnWithIcon = props => {
+const BtnWithIcon1 = props => {
   return (
     <TouchableOpacity style={styles.nextButton} onPress={props?.onPress}>
       <Text style={styles.nextButtonText}>Next</Text>
@@ -18,7 +18,7 @@ const BtnWithIcon = props => {
   );
 };
 
-export default BtnWithIcon;
+export default BtnWithIcon1;
 
 const styles = StyleSheet.create({
   nextButton: {

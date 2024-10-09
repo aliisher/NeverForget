@@ -4,7 +4,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Colors} from '../Constant/Colors';
 import {hp, wp} from '../Constant/Responsive';
 
-const Header = props => {
+const AppHeader = props => {
   return (
     <View style={styles.navigationContainer}>
       <TouchableOpacity style={styles.arrowButton} onPress={props?.onPress}>
@@ -14,7 +14,7 @@ const Header = props => {
   );
 };
 
-export default Header;
+export default AppHeader;
 
 const styles = StyleSheet.create({
   navigationContainer: {

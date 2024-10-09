@@ -3,7 +3,7 @@ import React from 'react';
 import {hp, wp} from '../Constant/Responsive';
 import {Colors} from '../Constant/Colors';
 
-const Btn = props => {
+const Button = props => {
   return (
     <TouchableOpacity style={styles.button} onPress={() => props?.onPress}>
       <Text style={styles.buttonText}>{props?.title}</Text>
@@ -11,7 +11,7 @@ const Btn = props => {
   );
 };
 
-export default Btn;
+export default Button;
 
 const styles = StyleSheet.create({
   button: {

@@ -63,25 +63,6 @@ const BackGroundImages = () => {
           resizeMode="contain"
         />
       </View>
-      {/* Uncomment and add more icons if needed */}
-      {/* <View style={styles.topRightContainer}>
-        <ImageBackground
-          source={require('../Assets/image3.png')}
-          style={styles.icon}
-        />
-      </View> */}
-      {/* <View style={styles.topRightContainer}>
-        <ImageBackground
-          source={require('../Assets/image4.png')}
-          style={styles.icon}
-        />
-      </View> */}
-      {/* <View style={styles.topRightContainer}>
-        <ImageBackground
-          source={require('../Assets/image6.png')}
-          style={styles.icon}
-        />
-      </View> */}
     </View>
   );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 import {hp, wp} from '../Constant/Responsive';
 import {Colors} from '../Constant/Colors';
 
-const BtnRadius = props => {
+const ButtonRadius = props => {
   return (
     <TouchableOpacity style={styles.getStartedButton} onPress={props.onPress}>
       <Text style={styles.getStartedButtonText}>{props?.title}</Text>
@@ -11,7 +11,7 @@ const BtnRadius = props => {
   );
 };
 
-export default BtnRadius;
+export default ButtonRadius;
 
 const styles = StyleSheet.create({
   getStartedButton: {

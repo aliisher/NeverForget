@@ -13,4 +13,5 @@ export const Colors = {
   red: '#CE1515',
   follow: '#1DA1F2',
   grey: '#404040',
+  primary_black: '#4B4B4B',
 };
