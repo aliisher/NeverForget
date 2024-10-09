@@ -3,8 +3,14 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {FontSize, Fonts} from '../Constant/Fonts';
 import {Colors} from '../Constant/Colors';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Feather from 'react-native-vector-icons/Feather';
+import Octicons from 'react-native-vector-icons/Octicons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {wp} from '../Constant/Responsive';
 import Home from '../Screen/Home/Home';
+import Setting from '../Screen/Setting/Setting';
+import Added from '../Screen/Save/BookMark';
+import BookMark from '../Screen/BookMark/BookMark';
 
 const BottomStack = createBottomTabNavigator();
 
@@ -23,7 +29,7 @@ export default function BottomNavigation() {
         tabBarLabelStyle: {
           fontFamily: Fonts.regular,
           fontSize: FontSize.XXXS,
-          color: Colors.lightBlack,
+          color: Colors.white,
         },
       }}>
       <BottomStack.Screen
@@ -35,7 +41,7 @@ export default function BottomNavigation() {
               <Icon
                 name="home" // Icon name for home (from Ionicons)
                 size={wp(7)}
-                color={Colors.green} // Active color
+                color={Colors.primary} // Active color
               />
             ) : (
               <Icon
@@ -47,21 +53,61 @@ export default function BottomNavigation() {
         }}
       />
       <BottomStack.Screen
-        name="Home"
-        component={Home}
+        name="Added"
+        component={Added}
         options={{
           tabBarIcon: ({focused}) =>
             focused ? (
-              <Icon
-                name="list" // Icon name for Groovy Feeds (from Ionicons)
+              <Octicons
+                name="diff-added" // Icon name for home (from Ionicons)
                 size={wp(7)}
-                color={Colors.green} // Active color
+                color={Colors.primary} // Active color
               />
             ) : (
-              <Icon
-                name="list-outline" // Icon name for inactive Groovy Feeds (from Ionicons)
+              <Octicons
+                name="diff-added" // Icon name for inactive home (from Ionicons)
                 size={wp(7)}
-                color={Colors.darkBlack} // Inactive color
+                color={Colors.primary_black} // Inactive color
+              />
+            ),
+        }}
+      />
+      <BottomStack.Screen
+        name="BookMark"
+        component={BookMark}
+        options={{
+          tabBarIcon: ({focused}) =>
+            focused ? (
+              <FontAwesome
+                name="bookmark" // Icon name for home (from Ionicons)
+                size={wp(7)}
+                color={Colors.primary} // Active color
+              />
+            ) : (
+              <FontAwesome
+                name="bookmark-o" // Icon name for inactive home (from Ionicons)
+                size={wp(7)}
+                color={Colors.primary_black} // Inactive color
+              />
+            ),
+        }}
+      />
+      <BottomStack.Screen
+        name="Setting"
+        component={Setting}
+        options={{
+          tabBarIcon: ({focused}) =>
+            focused ? (
+              <Feather
+                name="settings" // Icon name for home (from Ionicons)
+                size={wp(7)}
+                color={Colors.primary} // Active color
+              />
+            ) : (
+              <Feather
+                name="settings" // Icon name for inactive home (from Ionicons)
+                size={wp(7)}
+                color={Colors.primary_black} // Inactive color
               />
             ),
         }}

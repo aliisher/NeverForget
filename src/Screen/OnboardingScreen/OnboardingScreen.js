@@ -55,7 +55,10 @@ const OnboardingScreen = () => {
       <View style={styles.buttonContainer}>
         {activeIndex < data.length - 1 && (
           <>
-            <Button title={'Skip'} onPress={() => console.log('Skip')} />
+            <Button
+              title={'Skip'}
+              onPress={() => navigation.navigate('AuthNavigation')}
+            />
             <BtnWithIcon1 onPress={() => carouselRef.current.snapToNext()} />
           </>
         )}

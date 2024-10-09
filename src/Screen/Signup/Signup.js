@@ -42,7 +42,7 @@ const Signup = () => {
 
       const googleData = googleInfo?.profile;
       if (googleData?.email_verified) {
-        // navigation?.navigate('Map');
+        navigation?.navigate('BottomNavigation');
         Toast.show('You have successfully logged in', Toast.LONG);
       }
 
